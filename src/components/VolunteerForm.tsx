@@ -21,7 +21,7 @@ const VolunteerForm = () => {
     skills: '',
     experience: '',
     availability: '',
-    interests: [],
+    interests: [] as string[],
     motivation: '',
     emergencyContact: '',
     emergencyPhone: '',

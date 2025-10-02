@@ -9,6 +9,7 @@ node_modules/
 # Next.js
 /.next/
 /out/
+/uploads/
 
 # Production
 /build
@@ -47,3 +48,4 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+build.bat

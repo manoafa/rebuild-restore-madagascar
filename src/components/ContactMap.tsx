@@ -9,32 +9,41 @@ const ContactMap = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8 }}
       className="relative"
-    >
-      {/* Placeholder for Google Maps - In a real implementation, you would use Google Maps API */}
-      <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-            </svg>
+    >    
+      <div className="relative w-full h-64 rounded-lg overflow-hidden">
+        {/* Google Map */}
+        <iframe
+          title="Google Map Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.1585987506724!2d47.50797987491259!3d-18.905800887171575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07d64df59cc7b%3A0x6c92a7fbdc1a9c6b!2sAJA2%20Ambohimahatsinjo%2C%20Antananarivo%20101%2C%20Madagascar!5e0!3m2!1sen!2smg!4v1696593470585!5m2!1sen!2smg"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        {/* Map overlay with info */}
+        <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+          <div className="flex items-center justify-between">
+            <div>
+              <h4 className="font-semibold text-gray-900">Our Main Office</h4>
+              <p className="text-sm text-gray-600">
+                AJA2 Ambohimahatsinjo, Antananarivo 101, Madagascar
+              </p>
+            </div>
+            <a
+              href="https://maps.app.goo.gl/iTVk7gBgHBwr15E4A"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              Get Directions
+            </a>
           </div>
-          <p className="text-gray-600 font-medium">Interactive Map</p>
-          <p className="text-sm text-gray-500">123 Charity Street, New York, NY 10001</p>
         </div>
       </div>
-      
-      {/* Map overlay with additional info */}
-      <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-        <div className="flex items-center justify-between">
-          <div>
-            <h4 className="font-semibold text-gray-900">Our Main Office</h4>
-            <p className="text-sm text-gray-600">123 Charity Street, New York, NY 10001</p>
-          </div>
-          <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
-            Get Directions
-          </button>
-        </div>
-      </div>
+
     </motion.div>
   )
 }

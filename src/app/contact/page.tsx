@@ -80,10 +80,10 @@ const Contact = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
               <p className="text-gray-600 mb-4">Send us a message anytime</p>
               <a
-                href="mailto:info@rebuildrestore.org"
+                href="mailto:rebuild.restore.mada@gmail.com"
                 className="text-primary hover:text-blue-700 font-medium"
               >
-                info@rebuildrestore.org
+                rebuild.restore.mada@gmail.com
               </a>
             </motion.div>
 
@@ -99,10 +99,10 @@ const Contact = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
               <p className="text-gray-600 mb-4">Speak with our team directly</p>
               <a
-                href="tel:+15551234567"
+                href="tel:+261340765418"
                 className="text-secondary hover:text-orange-700 font-medium"
               >
-                +1 (555) 123-4567
+                + 261 34 07 654 18
               </a>
             </motion.div>
 
@@ -118,8 +118,8 @@ const Contact = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
               <p className="text-gray-600 mb-4">Our main office location</p>
               <p className="text-gray-700 text-sm">
-                123 Charity Street<br />
-                New York, NY 10001
+                AJA2 Ambohimahatsinjo<br />
+                Antananarivo 101, Madagascar
               </p>
             </motion.div>
 
@@ -135,7 +135,7 @@ const Contact = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Office Hours</h3>
               <p className="text-gray-600 mb-4">When we're available</p>
               <p className="text-gray-700 text-sm">
-                Mon - Fri: 9AM - 6PM<br />
+                Mon - Fri: 8AM - 6PM<br />
                 Sat: 10AM - 4PM<br />
                 Sun: Closed
               </p>

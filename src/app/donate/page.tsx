@@ -40,11 +40,6 @@ const Donate = () => {
               </div>
               <div className="w-px h-4 bg-gray-400"></div>
               <div className="flex items-center">
-                <Heart className="h-4 w-4 mr-2 text-red-500" />
-                100% Tax Deductible
-              </div>
-              <div className="w-px h-4 bg-gray-400"></div>
-              <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
                 Transparent Impact
               </div>
@@ -139,10 +134,6 @@ const Donate = () => {
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
                     <span>Local community involvement and leadership</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
-                    <span>Proven track record of sustainable impact</span>
-                  </li>
                 </ul>
               </div>
             </motion.div>
@@ -186,11 +177,6 @@ const Donate = () => {
           </motion.div>
 
           <div className="max-w-3xl mx-auto space-y-6">
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="font-semibold text-gray-900 mb-2">Is my donation tax-deductible?</h3>
-              <p className="text-gray-600">Yes, Rebuild & Restore Madagascar is a registered 501(c)(3) nonprofit organization, making all donations tax-deductible to the full extent allowed by law.</p>
-            </div>
-            
             <div className="bg-gray-50 p-6 rounded-xl">
               <h3 className="font-semibold text-gray-900 mb-2">How much of my donation goes to programs?</h3>
               <p className="text-gray-600">85% of every donation goes directly to our programs and services. The remaining 15% covers essential operational costs like staff, fundraising, and administration.</p>

@@ -15,14 +15,14 @@ const Blog = () => {
   const blogPosts = [
     {
       id: 1,
-      title: 'Clean Water Initiative Reaches 10,000 People',
-      excerpt: 'Our latest water well project has successfully provided clean drinking water to over 10,000 people in rural Madagascar communities.',
+      title: 'Empowering Education: Sharing School Supplies',
+      excerpt: 'A team of 10 dedicated volunteers came together to collect and distribute essential school materials to underprivileged students, helping them start the school year with confidence and hope.',
       content: 'Full article content here...',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      author: 'Dr. Sarah Johnson',
+      image: '/heroscared.avif',
+      author: 'Admin',
       date: '2024-01-15',
       category: 'Projects',
-      tags: ['Water', 'Infrastructure', 'Community'],
+      tags: ['Social', 'Education', 'Community'],
       readTime: '5 min read'
     },
     {
@@ -30,7 +30,7 @@ const Blog = () => {
       title: 'Volunteer Spotlight: Meet Jean-Baptiste',
       excerpt: 'Learn about Jean-Baptiste\'s journey from community member to project coordinator and how he\'s making a difference in his hometown.',
       content: 'Full article content here...',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/heroscared.avif',
       author: 'Maria Rodriguez',
       date: '2024-01-10',
       category: 'Volunteers',
@@ -42,7 +42,7 @@ const Blog = () => {
       title: 'Education Center Opens Its Doors',
       excerpt: 'After months of construction, our new education center in Toamasina is now open and welcoming students from the surrounding communities.',
       content: 'Full article content here...',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/heroscared.avif',
       author: 'Dr. Ahmed Hassan',
       date: '2024-01-05',
       category: 'Education',
@@ -54,7 +54,7 @@ const Blog = () => {
       title: 'Emergency Relief Response Update',
       excerpt: 'Our emergency response team has been working around the clock to provide aid to communities affected by recent flooding in the region.',
       content: 'Full article content here...',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/heroscared.avif',
       author: 'Emergency Response Team',
       date: '2024-01-01',
       category: 'Emergency',
@@ -66,7 +66,7 @@ const Blog = () => {
       title: 'Women\'s Empowerment Program Success Stories',
       excerpt: 'Three inspiring stories from women who have transformed their lives through our empowerment program and are now community leaders.',
       content: 'Full article content here...',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/heroscared.avif',
       author: 'Sarah Johnson',
       date: '2023-12-28',
       category: 'Social',
@@ -78,7 +78,7 @@ const Blog = () => {
       title: 'Annual Impact Report 2023',
       excerpt: 'A comprehensive look at our achievements, challenges, and impact throughout 2023, including key statistics and future goals.',
       content: 'Full article content here...',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      image: '/heroscared.avif',
       author: 'Executive Team',
       date: '2023-12-20',
       category: 'Reports',
@@ -206,7 +206,8 @@ const Blog = () => {
                   ))}
                 </div>
                 <Link
-                  href={`/blog/${blogPosts[0].id}`}
+                  // href={`/blog/${blogPosts[0].id}`}
+                  href="#"
                   className="btn-primary inline-flex items-center group"
                 >
                   Read More
@@ -219,7 +220,7 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section ref={ref} className="py-20 bg-white">
+      {/* <section ref={ref} className="py-20 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.slice(1).map((post, index) => (
@@ -298,7 +299,7 @@ const Blog = () => {
             </motion.div>
           )}
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

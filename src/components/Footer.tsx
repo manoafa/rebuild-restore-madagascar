@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react'
 
 const Footer = () => {
@@ -33,11 +34,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-300 hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/projects" className="text-gray-300 hover:text-primary transition-colors">Our Projects</Link></li>
-              <li><Link href="/blog" className="text-gray-300 hover:text-primary transition-colors">Blog & News</Link></li>
-              <li><Link href="/volunteer" className="text-gray-300 hover:text-primary transition-colors">Volunteer</Link></li>
-              <li><Link href="/contact" className="text-gray-300 hover:text-primary transition-colors">Contact Us</Link></li>
+              <li><Link href="/about" className="text-gray-300 hover:text-secondary transition-colors">About Us</Link></li>
+              <li><Link href="/projects" className="text-gray-300 hover:text-secondary transition-colors">Our Projects</Link></li>
+              <li><Link href="/blog" className="text-gray-300 hover:text-secondary transition-colors">Blog & News</Link></li>
+              <li><Link href="/volunteer" className="text-gray-300 hover:text-secondary transition-colors">Volunteer</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-secondary transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
@@ -45,10 +46,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Ways to Help</h3>
             <ul className="space-y-2">
-              <li><Link href="/donate" className="text-gray-300 hover:text-primary transition-colors">Make a Donation</Link></li>
-              <li><Link href="/volunteer" className="text-gray-300 hover:text-primary transition-colors">Become a Volunteer</Link></li>
-              <li><Link href="/projects" className="text-gray-300 hover:text-primary transition-colors">Sponsor a Project</Link></li>
-              <li><Link href="/blog" className="text-gray-300 hover:text-primary transition-colors">Share Our Story</Link></li>
+              <li><Link href="/donate" className="text-gray-300 hover:text-secondary transition-colors">Make a Donation</Link></li>
+              <li><Link href="/volunteer" className="text-gray-300 hover:text-secondary transition-colors">Become a Volunteer</Link></li>
+              <li><Link href="/projects" className="text-gray-300 hover:text-secondary transition-colors">Sponsor a Project</Link></li>
+              <li><Link href="/blog" className="text-gray-300 hover:text-secondary transition-colors">Share Our Story</Link></li>
             </ul>
           </div>
 
@@ -78,9 +79,23 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © 2024 Rebuild & Restore Madagascar. All rights reserved.
-            </p>
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+              <p className="text-gray-400 text-sm">
+                © {new Date().getFullYear()} Rebuild & Restore Madagascar.
+              </p>
+              <div className="flex items-center gap-2 text-gray-400 text-sm">
+                <span>Designed by</span>
+                <a href="https://sinnov.info" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                  <Image 
+                    src="/SI-logo.png" 
+                    alt="Sinnov Info" 
+                    width={20} 
+                    height={18} 
+                    className="inline-block"
+                  />
+                </a>
+              </div>
+            </div>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-primary transition-colors">
                 Privacy Policy

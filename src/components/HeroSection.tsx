@@ -71,7 +71,7 @@ const HeroSection = () => {
               </Link>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -86,7 +86,7 @@ const HeroSection = () => {
                 <Heart className="h-4 w-4 text-red-500" />
                 <span>Trusted by 10,000+ supporters</span>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Image/Visual */}
@@ -98,20 +98,20 @@ const HeroSection = () => {
           >
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="/heroscared.avif"
                 alt="Community in Madagascar"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">15+</div>
+                  <div className="text-3xl font-bold text-primary">3+</div>
                   <div className="text-sm text-gray-600">Years of Impact</div>
                 </div>
               </div>
               <div className="absolute -top-6 -right-6 bg-secondary text-white p-6 rounded-xl shadow-lg">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">50+</div>
-                  <div className="text-sm">Projects Completed</div>
+                  <div className="text-3xl font-bold">150+</div>
+                  <div className="text-sm">Children helped</div>
                 </div>
               </div>
             </div>

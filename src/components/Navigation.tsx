@@ -54,9 +54,9 @@ const Navigation = () => {
                 className={`transition-colors duration-200 font-medium ${
                   isHomePage
                     ? isScrolled
-                      ? 'text-black hover:text-primary'
-                      : 'text-white hover:text-primary'
-                    : 'text-black hover:text-primary'
+                      ? 'text-black hover:text-secondary'
+                      : 'text-white hover:text-secondary'
+                    : 'text-black hover:text-secondary'
                 }`}
               >
                 {item.name}
@@ -104,9 +104,9 @@ const Navigation = () => {
                 className={`transition-colors duration-200 font-medium ${
                   isHomePage
                     ? isScrolled
-                      ? 'text-black hover:text-primary'
-                      : 'text-white hover:text-primary'
-                    : 'text-black hover:text-primary'
+                      ? 'text-black hover:text-secondary'
+                      : 'text-white hover:text-secondary'
+                    : 'text-black hover:text-secondary'
                 }`}
               >
                 {item.name}
@@ -117,9 +117,9 @@ const Navigation = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                 isHomePage
                   ? isScrolled
-                    ? 'bg-primary text-white hover:bg-red-700'
-                    : 'bg-secondary text-white hover:bg-green-700'
-                  : 'bg-primary text-white hover:bg-red-700'
+                    ? 'bg-primary text-white hover:bg-green-700'
+                    : 'bg-secondary text-white hover:bg-red-700'
+                  : 'bg-primary text-white hover:bg-green-700'
               }`}
             >
               Donate

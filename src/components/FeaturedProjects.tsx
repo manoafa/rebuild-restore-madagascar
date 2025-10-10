@@ -13,33 +13,33 @@ const FeaturedProjects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Clean Water Initiative',
-      description: 'Installing water wells and purification systems in rural communities to provide access to clean, safe drinking water.',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      title: 'Weekend Food Sharing',
+      description: 'Providing free, nutritious meals to students after classes every Saturday to promote community care and reduce food insecurity.',
+      image: '/heroscared.avif',
       status: 'Ongoing',
-      location: 'Antananarivo Region',
-      volunteers: 25,
+      location: 'Antananarivo',
+      volunteers: 12,
       progress: 75
     },
     {
       id: 2,
       title: 'Education Center Construction',
       description: 'Building modern educational facilities to provide quality education for children in underserved communities.',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      status: 'Completed',
-      location: 'Toamasina Province',
-      volunteers: 40,
-      progress: 100
+      image: '/heroscared.avif',
+      status: 'Ongoing',
+      location: 'Antananarivo',
+      volunteers: 5,
+      progress: 15
     },
     {
       id: 3,
-      title: 'Healthcare Mobile Unit',
-      description: 'Providing essential medical services and health education to remote villages through our mobile healthcare program.',
-      image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      status: 'Planning',
-      location: 'Fianarantsoa Region',
-      volunteers: 15,
-      progress: 30
+      title: 'Sharing School Supplies',
+      description: 'Collecting and distributing essential school materials to underprivileged students to support their education and learning success.',
+      image: '/heroscared.avif',
+      status: 'Completed',
+      location: 'Antananarivo',
+      volunteers: 10,
+      progress: 100
     }
   ]
 
@@ -56,8 +56,7 @@ const FeaturedProjects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our ongoing and completed initiatives that are making a real difference 
-            in communities across Madagascar.
+            Discover our ongoing and completed initiatives that are making a real difference in the communities we serve.
           </p>
         </motion.div>
 
@@ -93,7 +92,7 @@ const FeaturedProjects = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 text-justify">
                   {project.description}
                 </p>
                 

@@ -50,7 +50,7 @@ const StatsSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Through the dedication of our volunteers and the generosity of our supporters, 
-            we've been able to make a meaningful difference in communities across Madagascar.
+            we've been able to make a meaningful difference in 5+ communities around Ambohimahatsinjo Antananarivo Madagascar.
           </p>
         </motion.div>
 

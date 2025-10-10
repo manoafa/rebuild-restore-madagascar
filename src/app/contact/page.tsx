@@ -247,7 +247,12 @@ const Contact = () => {
             
             <div className="bg-gray-50 p-6 rounded-xl">
               <h3 className="font-semibold text-gray-900 mb-2">How can my company partner with you?</h3>
-              <p className="text-gray-600">We welcome corporate partnerships! Contact us at partner@rnr.mg to discuss collaboration opportunities.</p>
+              <p className="text-gray-600">We welcome corporate partnerships! Contact us at <a
+                href="mailto:partner@rnr.mg"
+                className="text-secondary hover:text-primary font-medium"
+              >
+                partner@rnr.mg
+              </a> to discuss collaboration opportunities.</p>
             </div>
           </div>
         </div>

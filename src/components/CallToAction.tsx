@@ -11,7 +11,7 @@ const CallToAction = () => {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-r from-primary to-secondary">
+    <section ref={ref} className="py-20 bg-gradient-to-r from-secondary/75 to-primary/75">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

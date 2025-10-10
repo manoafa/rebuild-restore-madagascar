@@ -2,76 +2,25 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { User, Mail, Phone, Calendar, MapPin, Briefcase, Clock, Send } from 'lucide-react'
+import { Send, User, Mail, Phone, Calendar, MessageCircle } from 'lucide-react'
 
 const VolunteerForm = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    fullName: '',
+    dateOfBirth: '',
     email: '',
     phone: '',
-    dateOfBirth: '',
-    address: '',
-    city: '',
-    state: '',
-    zipCode: '',
-    country: '',
-    occupation: '',
-    company: '',
-    skills: '',
-    experience: '',
-    availability: '',
-    interests: [] as string[],
+    volunteerType: '',
     motivation: '',
-    emergencyContact: '',
-    emergencyPhone: '',
-    medicalConditions: '',
-    languages: '',
-    previousVolunteer: false,
-    previousExperience: '',
-    references: '',
-    additionalInfo: ''
+    experience: ''
   })
-
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const interestOptions = [
-    'Education & Teaching',
-    'Healthcare & Medical',
-    'Construction & Infrastructure',
-    'Community Development',
-    'Environmental Conservation',
-    'Women\'s Empowerment',
-    'Children & Youth',
-    'Emergency Relief',
-    'Administrative Support',
-    'Fundraising & Marketing',
-    'Translation & Communication',
-    'Technology & IT'
-  ]
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target
-    if (type === 'checkbox') {
-      const checked = (e.target as HTMLInputElement).checked
-      setFormData(prev => ({
-        ...prev,
-        [name]: checked
-      }))
-    } else {
-      setFormData(prev => ({
-        ...prev,
-        [name]: value
-      }))
-    }
-  }
-
-  const handleInterestChange = (interest: string) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
-      interests: prev.interests.includes(interest)
-        ? prev.interests.filter(i => i !== interest)
-        : [...prev.interests, interest]
+      [name]: value
     }))
   }
 
@@ -84,6 +33,15 @@ const VolunteerForm = () => {
     
     setIsSubmitting(false)
     alert('Thank you for your application! We\'ll get back to you within 48 hours.')
+    setFormData({
+      fullName: '',
+      dateOfBirth: '',
+      email: '',
+      phone: '',
+      volunteerType: '',
+      motivation: '',
+      experience: ''
+    })
   }
 
   return (
@@ -91,419 +49,200 @@ const VolunteerForm = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-white rounded-2xl shadow-lg p-8"
+      className="bg-white rounded-xl shadow-lg p-8"
     >
-      <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-        Volunteer Application Form
-      </h3>
-
-      <form onSubmit={handleSubmit} className="space-y-8">
-        {/* Personal Information */}
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Full Name */}
         <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <User className="h-5 w-5 mr-2 text-primary" />
-            Personal Information
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                First Name *
-              </label>
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleInputChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Last Name *
-              </label>
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleInputChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email Address *
-              </label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Full Name *
+          </label>
+          <div className="relative">
+            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+            <input
+              type="text"
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleInputChange}
+              required
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              placeholder="Enter your full name"
+            />
+          </div>
+        </div>
+
+        {/* Date of Birth */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Date of Birth *
+          </label>
+          <div className="relative">
+            <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+            <input
+              type="date"
+              name="dateOfBirth"
+              value={formData.dateOfBirth}
+              onChange={handleInputChange}
+              required
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+          </div>
+        </div>
+
+        {/* Email and Phone */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Email Address *
+            </label>
+            <div className="relative">
+              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="your.email@example.com"
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number *
-              </label>
+          </div>
+          
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Phone Number *
+            </label>
+            <div className="relative">
+              <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
               <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
                 required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="+261 XX XX XXX XX"
               />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Date of Birth *
-              </label>
-              <input
-                type="date"
-                name="dateOfBirth"
-                value={formData.dateOfBirth}
-                onChange={handleInputChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Country *
-              </label>
-              <select
-                name="country"
-                value={formData.country}
-                onChange={handleInputChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              >
-                <option value="">Select Country</option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="UK">United Kingdom</option>
-                <option value="AU">Australia</option>
-                <option value="DE">Germany</option>
-                <option value="FR">France</option>
-                <option value="MG">Madagascar</option>
-                <option value="other">Other</option>
-              </select>
             </div>
           </div>
         </div>
 
-        {/* Address Information */}
+        {/* Type of Volunteer - Radio Buttons */}
         <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <MapPin className="h-5 w-5 mr-2 text-primary" />
-            Address Information
-          </h4>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Street Address
-              </label>
+          <label className="block text-sm font-medium text-gray-700 mb-3">
+            Type of Volunteer *
+          </label>
+          <div className="space-y-3">
+            <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
               <input
-                type="text"
-                name="address"
-                value={formData.address}
+                type="radio"
+                name="volunteerType"
+                value="teacher"
+                checked={formData.volunteerType === 'teacher'}
                 onChange={handleInputChange}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                required
+                className="h-4 w-4 text-primary focus:ring-primary border-gray-300"
               />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  City
-                </label>
-                <input
-                  type="text"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleInputChange}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                />
+              <div className="ml-3">
+                <span className="block text-sm font-semibold text-gray-900">Teacher</span>
+                <span className="block text-xs text-gray-600">Teach, play with, and mentor children</span>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  State/Province
-                </label>
-                <input
-                  type="text"
-                  name="state"
-                  value={formData.state}
-                  onChange={handleInputChange}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  ZIP/Postal Code
-                </label>
-                <input
-                  type="text"
-                  name="zipCode"
-                  value={formData.zipCode}
-                  onChange={handleInputChange}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Professional Information */}
-        <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <Briefcase className="h-5 w-5 mr-2 text-primary" />
-            Professional Information
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Current Occupation
-              </label>
-              <input
-                type="text"
-                name="occupation"
-                value={formData.occupation}
-                onChange={handleInputChange}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Company/Organization
-              </label>
-              <input
-                type="text"
-                name="company"
-                value={formData.company}
-                onChange={handleInputChange}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-          </div>
-          <div className="mt-4">
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              Skills and Expertise
             </label>
+            
+            <label className="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+              <input
+                type="radio"
+                name="volunteerType"
+                value="administrator"
+                checked={formData.volunteerType === 'administrator'}
+                onChange={handleInputChange}
+                required
+                className="h-4 w-4 text-primary focus:ring-primary border-gray-300"
+              />
+              <div className="ml-3">
+                <span className="block text-sm font-semibold text-gray-900">Administrator</span>
+                <span className="block text-xs text-gray-600">Handle newsletters, social media, partner meetings</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        {/* Motivation */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Motivation for Joining *
+          </label>
+          <div className="relative">
+            <MessageCircle className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
             <textarea
-              name="skills"
-              value={formData.skills}
+              name="motivation"
+              value={formData.motivation}
               onChange={handleInputChange}
-              rows={3}
-              placeholder="Please describe your skills, qualifications, and areas of expertise..."
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              required
+              rows={4}
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+              placeholder="Tell us why you want to volunteer with us and what you hope to contribute..."
             />
           </div>
         </div>
 
-        {/* Volunteer Interests */}
+        {/* Volunteering Experience */}
         <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-            <Clock className="h-5 w-5 mr-2 text-primary" />
-            Volunteer Interests
-          </h4>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-3">
-              Areas of Interest (Select all that apply) *
-            </label>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {interestOptions.map((interest) => (
-                <label key={interest} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    checked={formData.interests.includes(interest)}
-                    onChange={() => handleInterestChange(interest)}
-                    className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded"
-                  />
-                  <span className="ml-2 text-sm text-gray-700">{interest}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Availability *
-              </label>
-              <select
-                name="availability"
-                value={formData.availability}
-                onChange={handleInputChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              >
-                <option value="">Select Availability</option>
-                <option value="weekends">Weekends Only</option>
-                <option value="weekdays">Weekdays Only</option>
-                <option value="flexible">Flexible</option>
-                <option value="full-time">Full-time (3+ months)</option>
-                <option value="remote">Remote/Virtual</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Languages Spoken
-              </label>
-              <input
-                type="text"
-                name="languages"
-                value={formData.languages}
-                onChange={handleInputChange}
-                placeholder="e.g., English, French, Malagasy"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-          </div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Volunteering Experience (if any)
+          </label>
+          <textarea
+            name="experience"
+            value={formData.experience}
+            onChange={handleInputChange}
+            rows={4}
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+            placeholder="Please describe any previous volunteering experience you have (optional)..."
+          />
         </div>
 
-        {/* Motivation and Experience */}
-        <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-4">
-            Motivation and Experience
-          </h4>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Why do you want to volunteer with us? *
-              </label>
-              <textarea
-                name="motivation"
-                value={formData.motivation}
-                onChange={handleInputChange}
-                required
-                rows={4}
-                placeholder="Please tell us about your motivation for volunteering and what you hope to contribute..."
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Previous Volunteer Experience
-              </label>
-              <textarea
-                name="previousExperience"
-                value={formData.previousExperience}
-                onChange={handleInputChange}
-                rows={3}
-                placeholder="Please describe any previous volunteer experience..."
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Emergency Contact */}
-        <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-4">
-            Emergency Contact Information
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Emergency Contact Name *
-              </label>
-              <input
-                type="text"
-                name="emergencyContact"
-                value={formData.emergencyContact}
-                onChange={handleInputChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Emergency Contact Phone *
-              </label>
-              <input
-                type="tel"
-                name="emergencyPhone"
-                value={formData.emergencyPhone}
-                onChange={handleInputChange}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Additional Information */}
-        <div>
-          <h4 className="text-lg font-semibold text-gray-900 mb-4">
-            Additional Information
-          </h4>
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Medical Conditions or Allergies
-              </label>
-              <textarea
-                name="medicalConditions"
-                value={formData.medicalConditions}
-                onChange={handleInputChange}
-                rows={2}
-                placeholder="Please disclose any medical conditions or allergies that may affect your volunteer work..."
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Additional Comments
-              </label>
-              <textarea
-                name="additionalInfo"
-                value={formData.additionalInfo}
-                onChange={handleInputChange}
-                rows={3}
-                placeholder="Any additional information you'd like to share..."
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-          </div>
+        {/* Newsletter Opt-in */}
+        <div className="flex items-start space-x-3">
+          <input
+            type="checkbox"
+            id="newsletter"
+            className="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded mt-1"
+          />
+          <label htmlFor="newsletter" className="text-sm text-gray-600">
+            I would like to join the email list and stay updated on RnR's progress and opportunities.
+          </label>
         </div>
 
         {/* Submit Button */}
-        <div className="text-center">
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className={`px-8 py-4 rounded-lg font-semibold text-lg transition-colors ${
-              isSubmitting
-                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                : 'bg-primary text-white hover:bg-blue-700'
-            }`}
-          >
-            {isSubmitting ? (
-              <div className="flex items-center">
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                Submitting...
-              </div>
-            ) : (
-              <div className="flex items-center">
-                <Send className="h-5 w-5 mr-2" />
-                Submit Application
-              </div>
-            )}
-          </button>
-          <p className="text-sm text-gray-500 mt-4">
-            * Required fields. We'll review your application and get back to you within 48 hours.
-          </p>
-        </div>
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-colors ${
+            isSubmitting
+              ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              : 'bg-primary text-white hover:bg-blue-700'
+          }`}
+        >
+          {isSubmitting ? (
+            <div className="flex items-center justify-center">
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+              Submitting Application...
+            </div>
+          ) : (
+            <div className="flex items-center justify-center">
+              <Send className="h-5 w-5 mr-2" />
+              Submit Application
+            </div>
+          )}
+        </button>
+
+        <p className="text-sm text-gray-500 text-center">
+          * Required fields. We'll review your application and get back to you within 48 hours.
+        </p>
       </form>
     </motion.div>
   )
 }
 
 export default VolunteerForm
-
-
-
-
-
-

@@ -33,12 +33,7 @@ const Contact = () => {
               <div className="flex items-center">
                 <MessageCircle className="h-4 w-4 mr-2 text-primary" />
                 Quick Response
-              </div>
-              <div className="w-px h-4 bg-gray-400"></div>
-              <div className="flex items-center">
-                <Clock className="h-4 w-4 mr-2 text-primary" />
-                24/7 Support
-              </div>
+              </div>          
               <div className="w-px h-4 bg-gray-400"></div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-primary" />
@@ -67,23 +62,23 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-center p-6 bg-gray-50 rounded-xl"
+              className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-2xl transition-shadow duration-300 group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <Mail className="h-8 w-8 text-primary" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-full mb-4 transition-transform duration-100 group-hover:animate-pulse">
+                <Mail className="h-8 w-8 text-secondary" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
               <p className="text-gray-600 mb-4">Send us a message anytime</p>
               <a
-                href="mailto:rebuild.restore.mada@gmail.com"
-                className="text-primary hover:text-blue-700 font-medium"
+                href="mailto:contact@rnr.mg"
+                className="text-secondary hover:text-primary font-medium"
               >
-                rebuild.restore.mada@gmail.com
+                contact@rnr.mg
               </a>
             </motion.div>
 
@@ -91,16 +86,16 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center p-6 bg-gray-50 rounded-xl"
+              className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-2xl transition-shadow duration-300 group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-full mb-4 transition-transform duration-100 group-hover:animate-pulse">
                 <Phone className="h-8 w-8 text-secondary" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
               <p className="text-gray-600 mb-4">Speak with our team directly</p>
               <a
                 href="tel:+261340765418"
-                className="text-secondary hover:text-orange-700 font-medium"
+                className="text-secondary hover:text-primary font-medium"
               >
                 + 261 34 07 654 18
               </a>
@@ -110,9 +105,9 @@ const Contact = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-center p-6 bg-gray-50 rounded-xl"
+              className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-2xl transition-shadow duration-300 group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4 transition-transform duration-100 group-hover:animate-pulse">
                 <MapPin className="h-8 w-8 text-green-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
@@ -120,24 +115,6 @@ const Contact = () => {
               <p className="text-gray-700 text-sm">
                 AJA2 Ambohimahatsinjo<br />
                 Antananarivo 101, Madagascar
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-center p-6 bg-gray-50 rounded-xl"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                <Clock className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Office Hours</h3>
-              <p className="text-gray-600 mb-4">When we're available</p>
-              <p className="text-gray-700 text-sm">
-                Mon - Fri: 8AM - 6PM<br />
-                Sat: 10AM - 4PM<br />
-                Sun: Closed
               </p>
             </motion.div>
           </div>
@@ -213,15 +190,15 @@ const Contact = () => {
                   <a href="#" className="text-primary hover:text-blue-700">
                     Facebook
                   </a>
-                  <a href="#" className="text-primary hover:text-blue-700">
+                  {/* <a href="#" className="text-primary hover:text-blue-700">
                     Twitter
-                  </a>
+                  </a> */}
                   <a href="#" className="text-primary hover:text-blue-700">
                     Instagram
                   </a>
-                  <a href="#" className="text-primary hover:text-blue-700">
+                  {/* <a href="#" className="text-primary hover:text-blue-700">
                     LinkedIn
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </motion.div>
@@ -230,7 +207,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white text-justify">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -255,22 +232,22 @@ const Contact = () => {
             
             <div className="bg-gray-50 p-6 rounded-xl">
               <h3 className="font-semibold text-gray-900 mb-2">Are donations tax-deductible?</h3>
-              <p className="text-gray-600">Yes, we are a registered 501(c)(3) nonprofit organization, so all donations are tax-deductible to the full extent allowed by law.</p>
+              <p className="text-gray-600">Yes, we are a registered 501(c)(3) nonprofit organization, so all donations are tax-deductible to the full extent allowed by law. However, we are still working on extending tax-deductible eligibility for donors outside of Madagascar.</p>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-xl">
               <h3 className="font-semibold text-gray-900 mb-2">How do I know my donation is being used effectively?</h3>
-              <p className="text-gray-600">We maintain complete transparency in our operations. 85% of donations go directly to programs, and we provide regular impact reports and updates on our website.</p>
+              <p className="text-gray-600">We maintain complete transparency in our operations. 85% of donations go directly to programs, and we provide regular impact reports and updates on our website, which we also send by email to our donors.</p>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-xl">
               <h3 className="font-semibold text-gray-900 mb-2">Can I visit your projects in Madagascar?</h3>
-              <p className="text-gray-600">Yes! We organize regular donor and volunteer trips to Madagascar. Contact us to learn about upcoming trips and how you can participate.</p>
+              <p className="text-gray-600">Yes! We welcome visitors who wish to see our projects in person. While we do not organize regular group trips, we’re happy to support you in planning your visit and coordinating with our local team.</p>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-xl">
               <h3 className="font-semibold text-gray-900 mb-2">How can my company partner with you?</h3>
-              <p className="text-gray-600">We welcome corporate partnerships! Contact our partnership team at partnerships@rebuildrestore.org to discuss collaboration opportunities.</p>
+              <p className="text-gray-600">We welcome corporate partnerships! Contact us at partner@rnr.mg to discuss collaboration opportunities.</p>
             </div>
           </div>
         </div>

@@ -164,7 +164,6 @@ const DonationForm = () => {
       {/* Security Notice */}
       <div className="text-center text-sm text-gray-500">
         <p>🔒 Your donation is secure and encrypted</p>
-        <p>100% of your donation goes directly to our programs</p>
       </div>
     </div>
   )

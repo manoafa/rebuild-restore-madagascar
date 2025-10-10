@@ -83,7 +83,7 @@ const Donate = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">$25</h4>
-                      <p className="text-gray-600">Provides clean water for a family for one month</p>
+                      <p className="text-gray-600">Provides nutritious meals for children in need for one month</p>
                     </div>
                   </div>
                   
@@ -93,7 +93,7 @@ const Donate = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">$50</h4>
-                      <p className="text-gray-600">Sponsors a child's education for one month</p>
+                      <p className="text-gray-600">Supplies a child with school materials and meals for one month</p>
                     </div>
                   </div>
                   
@@ -103,7 +103,7 @@ const Donate = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">$100</h4>
-                      <p className="text-gray-600">Supports emergency relief for one family</p>
+                      <p className="text-gray-600">Supports after-school programs and tutoring for several children</p>
                     </div>
                   </div>
                   
@@ -113,7 +113,7 @@ const Donate = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">$250</h4>
-                      <p className="text-gray-600">Funds healthcare services for a community</p>
+                      <p className="text-gray-600">Helps a family with food, education, and essential support for an entire month</p>
                     </div>
                   </div>
                 </div>

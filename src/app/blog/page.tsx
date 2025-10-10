@@ -25,66 +25,66 @@ const Blog = () => {
       tags: ['Social', 'Education', 'Community'],
       readTime: '5 min read'
     },
-    {
-      id: 2,
-      title: 'Volunteer Spotlight: Meet Jean-Baptiste',
-      excerpt: 'Learn about Jean-Baptiste\'s journey from community member to project coordinator and how he\'s making a difference in his hometown.',
-      content: 'Full article content here...',
-      image: '/heroscared.avif',
-      author: 'Maria Rodriguez',
-      date: '2024-01-10',
-      category: 'Volunteers',
-      tags: ['Volunteer', 'Community', 'Leadership'],
-      readTime: '3 min read'
-    },
-    {
-      id: 3,
-      title: 'Education Center Opens Its Doors',
-      excerpt: 'After months of construction, our new education center in Toamasina is now open and welcoming students from the surrounding communities.',
-      content: 'Full article content here...',
-      image: '/heroscared.avif',
-      author: 'Dr. Ahmed Hassan',
-      date: '2024-01-05',
-      category: 'Education',
-      tags: ['Education', 'Construction', 'Students'],
-      readTime: '4 min read'
-    },
-    {
-      id: 4,
-      title: 'Emergency Relief Response Update',
-      excerpt: 'Our emergency response team has been working around the clock to provide aid to communities affected by recent flooding in the region.',
-      content: 'Full article content here...',
-      image: '/heroscared.avif',
-      author: 'Emergency Response Team',
-      date: '2024-01-01',
-      category: 'Emergency',
-      tags: ['Emergency', 'Relief', 'Flooding'],
-      readTime: '6 min read'
-    },
-    {
-      id: 5,
-      title: 'Women\'s Empowerment Program Success Stories',
-      excerpt: 'Three inspiring stories from women who have transformed their lives through our empowerment program and are now community leaders.',
-      content: 'Full article content here...',
-      image: '/heroscared.avif',
-      author: 'Sarah Johnson',
-      date: '2023-12-28',
-      category: 'Social',
-      tags: ['Women', 'Empowerment', 'Success'],
-      readTime: '7 min read'
-    },
-    {
-      id: 6,
-      title: 'Annual Impact Report 2023',
-      excerpt: 'A comprehensive look at our achievements, challenges, and impact throughout 2023, including key statistics and future goals.',
-      content: 'Full article content here...',
-      image: '/heroscared.avif',
-      author: 'Executive Team',
-      date: '2023-12-20',
-      category: 'Reports',
-      tags: ['Impact', 'Annual Report', 'Statistics'],
-      readTime: '10 min read'
-    }
+    // {
+    //   id: 2,
+    //   title: 'Volunteer Spotlight: Meet Jean-Baptiste',
+    //   excerpt: 'Learn about Jean-Baptiste\'s journey from community member to project coordinator and how he\'s making a difference in his hometown.',
+    //   content: 'Full article content here...',
+    //   image: '/heroscared.avif',
+    //   author: 'Maria Rodriguez',
+    //   date: '2024-01-10',
+    //   category: 'Volunteers',
+    //   tags: ['Volunteer', 'Community', 'Leadership'],
+    //   readTime: '3 min read'
+    // },
+    // {
+    //   id: 3,
+    //   title: 'Education Center Opens Its Doors',
+    //   excerpt: 'After months of construction, our new education center in Toamasina is now open and welcoming students from the surrounding communities.',
+    //   content: 'Full article content here...',
+    //   image: '/heroscared.avif',
+    //   author: 'Dr. Ahmed Hassan',
+    //   date: '2024-01-05',
+    //   category: 'Education',
+    //   tags: ['Education', 'Construction', 'Students'],
+    //   readTime: '4 min read'
+    // },
+    // {
+    //   id: 4,
+    //   title: 'Emergency Relief Response Update',
+    //   excerpt: 'Our emergency response team has been working around the clock to provide aid to communities affected by recent flooding in the region.',
+    //   content: 'Full article content here...',
+    //   image: '/heroscared.avif',
+    //   author: 'Emergency Response Team',
+    //   date: '2024-01-01',
+    //   category: 'Emergency',
+    //   tags: ['Emergency', 'Relief', 'Flooding'],
+    //   readTime: '6 min read'
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Women\'s Empowerment Program Success Stories',
+    //   excerpt: 'Three inspiring stories from women who have transformed their lives through our empowerment program and are now community leaders.',
+    //   content: 'Full article content here...',
+    //   image: '/heroscared.avif',
+    //   author: 'Sarah Johnson',
+    //   date: '2023-12-28',
+    //   category: 'Social',
+    //   tags: ['Women', 'Empowerment', 'Success'],
+    //   readTime: '7 min read'
+    // },
+    // {
+    //   id: 6,
+    //   title: 'Annual Impact Report 2023',
+    //   excerpt: 'A comprehensive look at our achievements, challenges, and impact throughout 2023, including key statistics and future goals.',
+    //   content: 'Full article content here...',
+    //   image: '/heroscared.avif',
+    //   author: 'Executive Team',
+    //   date: '2023-12-20',
+    //   category: 'Reports',
+    //   tags: ['Impact', 'Annual Report', 'Statistics'],
+    //   readTime: '10 min read'
+    // }
   ]
 
   const categories = ['all', 'Projects', 'Volunteers', 'Education', 'Emergency', 'Social', 'Reports']
@@ -220,7 +220,7 @@ const Blog = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      {/* <section ref={ref} className="py-20 bg-white">
+      <section ref={ref} className="py-20 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.slice(1).map((post, index) => (
@@ -299,7 +299,7 @@ const Blog = () => {
             </motion.div>
           )}
         </div>
-      </section> */}
+      </section>
     </div>
   )
 }

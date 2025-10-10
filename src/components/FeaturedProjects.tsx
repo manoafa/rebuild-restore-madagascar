@@ -122,7 +122,8 @@ const FeaturedProjects = () => {
                 </div>
 
                 <Link
-                  href={`/projects/${project.id}`}
+                  // href={`/projects/${project.id}`}
+                  href="/projects"
                   className="inline-flex items-center text-primary hover:text-blue-700 font-medium transition-colors"
                 >
                   Learn More

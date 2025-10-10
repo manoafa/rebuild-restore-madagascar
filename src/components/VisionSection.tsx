@@ -10,7 +10,7 @@ const VisionSection = () => {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <section ref={ref} className="py-20 bg-white">
+    <section ref={ref} className="py-20 bg-white text-justify">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,22 +39,22 @@ const VisionSection = () => {
             className="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-2xl shadow-lg"
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+              <div className="text-center group">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 group-hover:scale-125">
                   <Globe className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Natural Beauty</h3>
                 <p className="text-sm text-gray-600">Breathtaking jewel of the Indian Ocean</p>
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-full mb-4">
+              <div className="text-center group">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-full mb-4 transition-transform duration-300 group-hover:scale-125">
                   <Users className="h-8 w-8 text-secondary" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Youth Potential</h3>
                 <p className="text-sm text-gray-600">Vibrant demographic exceeding half the population</p>
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+              <div className="text-center group">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 group-hover:scale-125">
                   <Heart className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Our Commitment</h3>

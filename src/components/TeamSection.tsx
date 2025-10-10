@@ -13,26 +13,26 @@ const TeamSection = () => {
     {
       name: 'Manoa Johanna',
       role: 'Executive Director',
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-      bio: 'With over 20 years of experience in international development, Sarah leads our organization with passion and expertise.',
+      image: '/Johanna.jpeg',
+      bio: 'With over 8 years of experience in international development, Johanna leads our organization with passion and expertise.',
       linkedin: '#',
-      email: 'sarah@rebuildrestore.org'
+      email: '#'
     },
     {
       name: 'Manoa Fiderana',
-      role: 'Country Director, Madagascar',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-      bio: 'A native of Madagascar, Jean-Baptiste brings deep local knowledge and community connections to our work.',
+      role: 'General Secretary',
+      image: '/Fiderana.jpeg',
+      bio: 'A native of Madagascar, Fiderana brings deep local knowledge and community connections to our work.',
       linkedin: '#',
-      email: 'jean@rebuildrestore.org'
+      email: '#'
     },
     {
       name: 'Manoa Fenosoa',
       role: 'Program Manager',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-      bio: 'Maria oversees our education and healthcare programs, ensuring they meet the highest standards of quality.',
+      image: '/Fenosoa.jpg',
+      bio: 'Fenosoa oversees our education programs, ensuring they meet the highest standards of quality.',
       linkedin: '#',
-      email: 'maria@rebuildrestore.org'
+      email: '#'
     },
     // {
     //   name: 'Manoa Johanna',
@@ -62,7 +62,7 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-justify">
           {team.map((member, index) => (
             <motion.div
               key={member.name}
@@ -90,7 +90,7 @@ const TeamSection = () => {
                   {member.bio}
                 </p>
                 
-                <div className="flex space-x-3">
+                {/* <div className="flex space-x-3">
                   <a
                     href={member.linkedin}
                     className="text-gray-400 hover:text-primary transition-colors"
@@ -105,7 +105,7 @@ const TeamSection = () => {
                   >
                     <Mail className="h-5 w-5" />
                   </a>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}

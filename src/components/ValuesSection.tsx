@@ -38,7 +38,7 @@ const ValuesSection = () => {
     {
       icon: Users,
       title: 'Partnership',
-      description: 'We build strong partnerships with local organizations, governments, and communities.'
+      description: 'We believe in the power of partnerships, recognizing that lasting change and impact are never achieved alone.'
     }
   ]
 
@@ -67,9 +67,9 @@ const ValuesSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 text-center group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 transition-transform duration-500 group-hover:animate-ping group">
                 <value.icon className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">

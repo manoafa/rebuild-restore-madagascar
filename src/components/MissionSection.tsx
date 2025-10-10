@@ -61,11 +61,11 @@ const MissionSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 group"
             >
               <div className="p-8">
-                <div className="text-center mb-6">
-                  <div className={`inline-flex items-center justify-center w-20 h-20 ${mission.bgColor} rounded-full mb-6`}>
+                <div className="text-center mb-6 group">
+                  <div className={`inline-flex items-center justify-center w-20 h-20 ${mission.bgColor} rounded-full mb-6 transition-transform duration-300 group-hover:animate-bounce`}>
                     <mission.icon className={`h-10 w-10 ${mission.iconColor}`} />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">

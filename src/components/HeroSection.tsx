@@ -98,7 +98,7 @@ const HeroSection = () => {
           >
             <div className="relative">
               <img
-                src="/heroscared.avif"
+                src="/intro.mp4"
                 alt="Community in Madagascar"
                 className="rounded-2xl shadow-2xl"
               />
@@ -110,7 +110,7 @@ const HeroSection = () => {
               </div>
               <div className="absolute -top-6 -right-6 bg-secondary text-white p-6 rounded-xl shadow-lg">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">150+</div>
+                  <div className="text-3xl font-bold">200+</div>
                   <div className="text-sm">Children helped</div>
                 </div>
               </div>

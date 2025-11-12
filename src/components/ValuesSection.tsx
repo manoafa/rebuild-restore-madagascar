@@ -31,9 +31,9 @@ const ValuesSection = () => {
       description: 'All our projects are designed to create lasting, sustainable impact for future generations.'
     },
     {
-      icon: Lightbulb,
-      title: 'Innovation',
-      description: 'We embrace creative solutions and innovative approaches to address complex challenges.'
+      icon: Cross,
+      title: 'Faith'
+      description: 'Our faith in Christ is the foundation of all we do — guiding our love, integrity, and hope for restoration .'
     },
     {
       icon: Users,
@@ -56,7 +56,7 @@ const ValuesSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             These fundamental principles guide everything we do and shape how we 
-            approach our work in communities across Madagascar.
+            approach our work in the communities we serve.
           </p>
         </motion.div>
 

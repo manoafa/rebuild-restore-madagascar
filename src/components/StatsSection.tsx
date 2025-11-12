@@ -12,21 +12,21 @@ const StatsSection = () => {
   const stats = [
     {
       icon: Users,
-      number: '150+',
+      number: '200+',
       label: 'Lives Impacted',
       description: 'Families and individuals supported'
     },
     // {
-    //   icon: Heart,
-    //   number: '150+',
-    //   label: 'Communities Served',
-    //   description: 'Villages and towns across Madagascar'
+    //   icon: Book,
+    //   number: '100+',
+    //   label: 'School Supplies Donated',
+    //   description: 'Reducing barriers to education for the most vulnerable'
     // },
     {
-      icon: Target,
-      number: '85%',
-      label: 'Success Rate',
-      description: 'Projects completed successfully'
+      icon: Meal,
+      number: '7000+',
+      label: 'Meals Shared',
+      description: 'Free lunch provided'
     },
     {
       icon: Award,

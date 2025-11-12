@@ -23,7 +23,7 @@ const CallToAction = () => {
             Ready to Make a Difference?
           </h2>
           <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            Join the movement and be among the pioneering supporters making a difference. Whether through donations, volunteering, or spreading awareness, your involvement helps build powerful impact.
+            Join the movement and be among the pioneering supporters making a difference. Whether through donations, volunteering, prayers or spreading awareness, your involvement helps build powerful impact.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">

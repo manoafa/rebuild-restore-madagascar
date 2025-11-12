@@ -25,17 +25,15 @@ const AboutHero = () => {
             className="bg-white p-8 rounded-2xl shadow-lg"
           >
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              After meeting a Korean church elder who wanted to contribute to feeding poor children, we began this initiative in 2022 by serving 30 children in the small community of Ambohimahatsinjo and providing free meals along with English classes on Saturdays in the hope of giving them more opportunities in the future. With a continuously growing number of students, we are expanding our support and services to reach the wider community and eventually change the entire nation.
+              Our journey began in 2022 after meeting a Korean church elder who longed to help feed children in need. Having grown up in Madagascar, together, we started small in our little village — serving 30 children in the rural community of Ambohimahatsinjo, offering free meals and English classes every Saturday. What began as a simple act of love grew into a vision to create opportunity and restoration for the next generation and our team grew to the global team it is today.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Madagascar is home to over 32 million people, with nearly 60% under the age of 25. 
-              Yet, 67% of children face multidimensional poverty, lacking access to education, 
-              healthcare, and basic needs. While 76% enroll in primary school, only 27% make it 
-              to secondary education, and 1.7 million children remain out of school. Without urgent 
-              action, this entire generation will continue being trapped in poverty. Investing in 
-              education is not just a necessity, it's an opportunity to do something and we will 
-              not ignore it.
+              Madagascar is home to over 32 million people, with nearly 60% under the age of 25. Yet, 67% of children face multidimensional poverty — lacking access to education, healthcare, and basic needs. While 76% enroll in primary school, only 27% continue to secondary education, leaving 1.7 million children out of school. Without intervention, this generation risks being trapped in a cycle of poverty and lost potential.
             </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+              We believe investing in education and holistic care is not just a response to need — it’s an act of hope and faith in what Madagascar can become. From one small village, we are growing our programs to reach more families, build stronger communities, and ultimately help transform an entire nation, one restored life at a time.
+            </p>
+
           </motion.div>
         </div>
       </div>

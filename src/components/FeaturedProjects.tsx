@@ -13,33 +13,32 @@ const FeaturedProjects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Weekend Food Sharing',
-      description: 'Providing free, nutritious meals to students after classes every Saturday to promote community care and reduce food insecurity.',
+      title: 'Children and Youth Center ',
+      description: 'Construction of a 3-story multi-purpose center for education, arts, and community development.',
       image: '/heroscared.avif',
-      status: 'Ongoing',
-      location: 'Antananarivo',
-      volunteers: 12,
-      progress: 75
+       Category: 'Infrastrcuture',
+       Objective: 'Provide a permanent safe space for learning, creativity, and youth empowerment.',
+      Status: 'Urgent-Ongoing',
+      
     },
     {
       id: 2,
-      title: 'Education Center Construction',
-      description: 'Building modern educational facilities to provide quality education for children in underserved communities.',
+      title: 'Free Meal Sharing ',
+      description: 'Once a week, we share a nutritious meal with children and youth to promote community, health, and care.',
       image: '/heroscared.avif',
-      status: 'Ongoing',
-      location: 'Antananarivo',
-      volunteers: 5,
-      progress: 15
+       Category: 'Social',
+       Objective: 'Support children’s nutrition and create a sense of belonging.',
+      Status: 'Ongoing',
     },
     {
       id: 3,
-      title: 'Sharing School Supplies',
-      description: 'Collecting and distributing essential school materials to underprivileged students to support their education and learning success.',
+      title: 'Parent Workshop',
+      description: 'Strengthen family involvement in children’s education and promote positive parenting.',
       image: '/heroscared.avif',
-      status: 'Completed',
-      location: 'Antananarivo',
-      volunteers: 10,
-      progress: 100
+       Category: 'Infrastrcuture',
+       Objective: 'Provide a permanent safe space for learning, creativity, and youth empowerment.',
+      Status: 'Ongoing',
+
     }
   ]
 
@@ -56,7 +55,7 @@ const FeaturedProjects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our ongoing and completed initiatives that are making a real difference in the communities we serve.
+            Discover our ongoing initiatives that are making a real difference in the communities we serve.
           </p>
         </motion.div>
 

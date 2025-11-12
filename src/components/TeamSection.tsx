@@ -12,28 +12,69 @@ const TeamSection = () => {
   const team = [
     {
       name: 'Manoa Johanna',
-      role: 'Executive Director',
+      role: 'Founder / Director',
       image: '/Johanna.jpeg',
-      bio: 'With over 8 years of experience in international development, Johanna leads our organization with passion and expertise.',
-      linkedin: '#',
-      email: '#'
-    },
-    {
-      name: 'Manoa Fiderana',
-      role: 'General Secretary',
-      image: '/Fiderana.jpeg',
-      bio: 'A native of Madagascar, Fiderana brings deep local knowledge and community connections to our work.',
+      bio: 'Johanna founded the organization with a deep belief that small acts of love can create lasting change. Guided by her Christian faith, she strives to build a space where hope, education, and compassion meet to serve children and families in need. Her vision continues to inspire the team to work faithfully and joyfully for the community.',
       linkedin: '#',
       email: '#'
     },
     {
       name: 'Manoa Fenosoa',
-      role: 'Program Manager',
-      image: '/Fenosoa.jpg',
-      bio: 'Fenosoa oversees our education programs, ensuring they meet the highest standards of quality.',
+      role: Co-Founder/Program Manager',
+      image: '/Fenosoa.jpeg',
+      bio: 'Fenosoa oversees the coordination of projects and ensures that each program reflects care, integrity, and purpose. She believes that serving others is one of the most practical ways to live out her faith, and she finds joy in seeing lives transformed through learning and community support.',
       linkedin: '#',
       email: '#'
     },
+    {
+      name: 'Manoa Fiderana',
+      role: 'Consultant',
+      image: '/Fiderana.jpg',
+      bio: 'As a consultant who has lived most of his life in Madagascar, Fiderana provides valuable insight and guidance to help the organization grow sustainably and remain true to its values with local expertise.',
+      linkedin: '#',
+      email: '#'
+    },
+ {
+      name: 'Jaritiana & Jimmy',
+      role: 'Couple & Family educators',
+      image: '/logo-with-shadow.jpg',
+      bio: 'Passionate about strengthening families and helping couples, Jaritiana & Jimmy help couples in the community build healthy, faith-centered relationships. Through their guidance and workshops, they share practical tools for communication, unity, and love grounded in biblical principles. They believe that when families grow in grace and understanding, entire communities are strengthened.',
+      linkedin: '#',
+      email: '#'
+    },
+ {
+      name: 'Christi Cobb',
+      role: 'Co-Founder/U.S. Director',
+      image: '/Christi.jpg',
+      bio: 'An art and culture enthusiast, Christi is driven by a life of purpose and servanthood. With a heart for the development and discipleship of the Next Generation, she leads Rebuild N Restore's U.S.-based partnerships and supports organizational growth and new initiatives in collaboration with the Madagascar team.',
+      linkedin: '#',
+      email: '#'
+    },
+{
+      name: 'Sariaka',
+      role: 'Volunteer',
+      image: '/Sariaka.jpeg',
+      bio: 'I was never particularly passionate about education, and honestly, I didn’t know what my
+calling was. But through serving God with Rebuild and Restore Madagascar, I discovered
+and accepted it. Deep down, I had always desired to serve God in an organization, though I
+didn’t know which one. Now, almost two years later, I’m still here — always ready to give my
+best to share the Gospel with children, to plant God’s Word in their hearts, and to pass on
+the little I know with love and faith.'
+    },
+{
+      name: 'Danielle',
+      role: 'Volunteer',
+      image: '/Danielle.jpeg',
+      bio: 'But those who trust in the Lord will renew their strength. They will soar on wings like eagles. By trusting in God, all my youthful mistakes and weaknesses became my greatest testimonies and my strength to raise up this new generation. My calling generally focuses on teenagers and young adults, which ignites all my enthusiasm for these children.'
+    },
+{
+      name: 'Tandrify',
+      role: 'Volunteer',
+      image: '/Tandrify.jpg',
+      bio: 'With a passion for empowering children through education and faith in Jesus, I love
+teaching with compassion, helping children learn and grow with confidence.'
+    },
+
     // {
     //   name: 'Manoa Johanna',
     //   role: 'Medical Director',

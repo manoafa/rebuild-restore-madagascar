@@ -43,9 +43,9 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-200 leading-relaxed"
             >
-              Join us in building hope and restoring communities across Madagascar. 
-              Together, we can create sustainable change through education, healthcare, 
-              and community development.
+             Join us in bringing hope and restoring lives in Madagascar.
+             Through compassion, faith and education, we can build the foundation for lasting change – 
+              one child, one family, one community at a time.
             </motion.p>
 
             <motion.div

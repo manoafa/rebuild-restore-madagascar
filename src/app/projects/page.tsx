@@ -20,11 +20,11 @@ const Projects = () => {
       status: 'Urgent - Ongoing',
       objective: 'Provide a permanent safe space for learning, creativity, and youth empowerment.',
       situation: 'Many of our activities currently take place in temporary, overcrowded spaces. To give children a true place to grow, we are building a permanent center with classrooms, workshops, a library, dormitory, cafeteria, and play areas on a 200 m² plot.',
-       estimated Budget: '$35,000 (first phase)',
-        total Budget: '$87,000',
+       initial goal: '$35,000 (first phase)',
+        total budget: '$87,000',
         progress: 'Design complete; land secured; fundraising in progress; well digging started.'
       startDate: ' October 2025',
-      endDate:  February 2026'
+      endDate:  'February 2026'
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const Projects = () => {
       objective: 'Equip participants with basic to intermediate English communication skills, giving them greater access to higher education, global information, and employment opportunities.',
       situation: ' In rural communities, students rarely have the chance to learn English effectively due to a lack of teachers and materials. Our volunteer-led classes use songs, games, and conversation practice to make learning fun and meaningful.',
       schedule: 'Offered weekly',
-      startDate: ' June 2022'
+      startDate: 'June 2022'
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const Projects = () => {
       description: 'A weekly “life class” that teaches kindness, respect, discipline, and good manners to help children and youth grow into responsible, compassionate citizens and christians.',
       image: '/Life.jpg',
       category: 'Education & Capacity Building',
-      objective: Develop moral character, social responsibility, and emotional intelligence in young people.',
+      objective: 'Develop moral character, social responsibility, and emotional intelligence in young people.',
       situation: 'Many children lack structured guidance in personal and social values. Through storytelling, role-play, and community examples, we help them learn respect, teamwork, honesty, and empathy in a practical and engaging way.',
       schedule: 'Offered weekly',
       startDate: 'June 2022',
@@ -65,7 +65,7 @@ const Projects = () => {
       description: 'Monthly workshops to guide parents in supporting their children’s education and well-being, including marriage, family, and financial training.',
       image: '/Parents.jpg',
       category: 'Community Support',
-      objective: Develop moral character, social responsibility, and emotional intelligence in young people.',
+      objective: 'Develop moral character, social responsibility, and emotional intelligence in young people.',
       situation: ' Many parents never had the chance to receive proper guidance on parenting or communication. Our workshops, led by local family educators, provide practical tools and encouragement to help families grow together in understanding and faith.',
       schedule: 'Offered monthly',
       startDate: ' March 2024',
@@ -77,10 +77,10 @@ const Projects = () => {
       description: 'A community-based microfunding initiative where members pool small contributions together. The combined amount, supplemented by the organization, is then distributed to members in rotation as seed money to start or strengthen their personal or small business projects.',
       image: '/Farming.jpg',
        category: 'Livelihood Development',
-      objective: Promote financial inclusion and entrepreneurship among community members by providing access to small-scale funding and encouraging collective responsibility.',
+      objective: 'Promote financial inclusion and entrepreneurship among community members by providing access to small-scale funding and encouraging collective responsibility.',
       situation: 'Many children lack structured guidance in personal and social values. Through storytelling, role-play, and community examples, we help them learn respect, teamwork, honesty, and empathy in a practical and engaging way.',
       schedule: 'Offered weekly',
-      startDate: ' September 2025',
+      startDate: 'September 2025',
     },  
 {
       id: 7,
@@ -88,7 +88,7 @@ const Projects = () => {
       description: 'Collection and distribution of school supplies for the most disadvantaged children in our community.',
       image: '/Supplies.jpg',
        category: 'Education & Capacity Building',
-      objective: Ensure every child has access to basic learning materials.',
+      objective: 'Ensure every child has access to basic learning materials.',
       situation: 'For many children, the lack of notebooks, pencils, or uniforms is enough to keep them out of school. We partner with donors and schools to collect and distribute essential supplies each year.',
       schedule: 'Annually',
       startDate: 'September 2024',

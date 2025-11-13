@@ -37,7 +37,7 @@ const TeamSection = () => {
  {
       name: 'Jaritiana & Jimmy',
       role: 'Couple & Family educators',
-      image: '/logo-with-shadow.jpg',
+      image: '/JariJimmy.jpg',
       bio: 'Passionate about strengthening families and helping couples, Jaritiana & Jimmy help couples in the community build healthy, faith-centered relationships. Through their guidance and workshops, they share practical tools for communication, unity, and love grounded in biblical principles. They believe that when families grow in grace and understanding, entire communities are strengthened.',
       linkedin: '#',
       email: '#'

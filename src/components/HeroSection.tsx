@@ -41,12 +41,15 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-gray-200 leading-relaxed"
-            >
-             Join us in bringing hope and restoring lives in Madagascar.
-             Through compassion, faith and education, we can build the foundation for lasting change – 
-              one child, one family, one community at a time.
-            </motion.p>
+              className="text-xl text-gray-200 leading-relaxed" >
+              A community-driven education initiative committed to ending poverty in 
+              Madagascar by empowering the next generation.
+             </p>
+            <p className="text-xl text-gray-200 leading-relaxed">
+             Join us in bringing hope and restoring lives through compassion, faith, 
+             and education. Together, we can build the foundation for lasting change — 
+             one child, one family, one community at a time.
+             </p>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}

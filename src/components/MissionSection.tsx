@@ -16,7 +16,7 @@ const MissionSection = () => {
       color: 'primary',
       bgColor: 'bg-primary/10',
       iconColor: 'text-primary',
-      description: 'Education, as a foundation for growth, is the cornerstone of everything we do. We believe that knowledge is power, and by encouraging and providing access to quality education, we can equip young people with the skills they need to break the cycle of poverty. This empowers them to become confident individuals who can contribute meaningfully to their communities.'
+      description: 'Education is a foundation for growth and a vital path out of poverty. By encouraging and providing access to quality learning opportunities, we equip young people with the knowledge, skills, and confidence they need to build a hopeful future and contribute meaningfully to their communities.'
     },
     {
       icon: Lightbulb,
@@ -24,7 +24,7 @@ const MissionSection = () => {
       color: 'secondary',
       bgColor: 'bg-secondary/10',
       iconColor: 'text-secondary',
-      description: 'We believe that every child has the potential for greatness, and creativity is the key to unlocking it. We will provide a safe space for children to explore their artistic talents, experiment with new ideas, and express themselves freely. Through music, art, and other programs, we will nurture their creativity and encourage them to think outside the box. By fostering a culture of innovation, we will empower our young people to become the changemakers of tomorrow.'
+      description: 'We believe every child carries unique potential within them. We provide safe, inspiring spaces where they can explore their talents, express themselves freely, and develop innovative thinking. Through art, music, and other creative programs, we nurture imagination and a sense of purpose that empowers them to dream and achieve.'
     },
     {
       icon: Shield,
@@ -32,7 +32,15 @@ const MissionSection = () => {
       color: 'primary',
       bgColor: 'bg-primary/10',
       iconColor: 'text-primary',
-      description: 'Life may not be easy but we believe in fostering resilience in the young people we serve. We will create a supportive environment where they can learn from their mistakes, overcome challenges, and develop a strong ethic and character. We will equip them with the tools they need to navigate the complexities of life and build a future filled with hope and opportunity. Our ultimate goal is to see them flourish into fully fledged, honorable individuals who contribute positively to society.'
+      description: 'Life brings challenges, but with encouragement and guidance, every young person can grow stronger. We help children and youth develop character, perseverance, and a positive mindset. Through mentorship and supportive relationships, they learn to face difficulties with courage and build a future filled with hope and opportunity.'
+    }
+ {
+      icon: Jesus fish,
+      title: 'Cultivate Faith',
+      color: 'primary',
+      bgColor: 'bg-primary/10',
+      iconColor: 'text-primary',
+      description: 'Faith is the foundation that anchors and gives meaning to all we do. We walk alongside children and youth as they grow in their relationship with God — helping them discover that faith is not just learned, but lived, not inherited but personally found and built. Through discipleship, reflection, and community, we encourage them to build lives rooted in truth, love, and purpose.'
     }
   ]
 
@@ -49,8 +57,7 @@ const MissionSection = () => {
             Our Mission
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are committed to empowering the next generation through three core pillars 
-            that form the foundation of our work in Madagascar.
+            We are committed to empowering the next generation through education, creativity, resilience, and faith. Poverty is multidimensional — not only material, but emotional and spiritual. We do not believe that faith alone without action, or action without faith, can bring lasting change. Restoration happens when the whole person is cared for — body, mind, and spirit — and when justice, dignity, and worship are restored together.
           </p>
         </motion.div>
 
@@ -89,11 +96,10 @@ const MissionSection = () => {
         >
           <div className="bg-gradient-to-r from-primary to-secondary p-8 rounded-2xl text-white">
             <h3 className="text-2xl font-bold mb-4">
-              Together, We Build the Future
+               Then your light will break forth like the dawn, and your healing will quickly appear!
             </h3>
             <p className="text-lg opacity-90 max-w-3xl mx-auto">
-              Through education, creativity, and resilience, we're not just changing lives—we're 
-              transforming communities and building a brighter tomorrow for Madagascar.
+              Is not this the kind of fasting I have chosen: to loose the chains of injustice and untie the cords of the yoke, to set the oppressed free and break every yoke? Is it not to share your food with the hungry and to provide the poor wanderer with shelter— when you see the naked, to clothe them, and not to turn away from your own flesh and blood? (Isa 58)
             </p>
           </div>
         </motion.div>

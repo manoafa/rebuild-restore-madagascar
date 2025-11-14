@@ -23,10 +23,10 @@ const VisionSection = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <blockquote className="text-2xl font-medium text-primary mb-8 italic">
-              "Ny hazo no vanon-ko lakana, ny tany naniriany no tsara"
+              A hope and a future for every child and family — in Ambohimahatsinjo, Madagascar, and beyond.
             </blockquote>
             <p className="text-lg text-gray-600 mb-8">
-              This Malagasy saying can loosely be translated into 'a sturdy boat finds its form in fertile ground.'
+              We long to see a nation where people live with dignity, families are cared for, and communities flourish.
             </p>
           </div>
         </motion.div>
@@ -43,43 +43,37 @@ const VisionSection = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 group-hover:scale-125">
                   <Globe className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Natural Beauty</h3>
-                <p className="text-sm text-gray-600">Breathtaking jewel of the Indian Ocean</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Rebuilding</h3>
+                <p className="text-sm text-gray-600"> Laying new foundations to go from brokenness to hope</p>
               </div>
               <div className="text-center group">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-secondary/10 rounded-full mb-4 transition-transform duration-300 group-hover:scale-125">
-                  <Users className="h-8 w-8 text-secondary" />
+                  <Heart className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Youth Potential</h3>
-                <p className="text-sm text-gray-600">Vibrant demographic exceeding half the population</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Restoration</h3>
+                <p className="text-sm text-gray-600">Rekindling faith, identity, worth and beauty.</p>
               </div>
               <div className="text-center group">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 transition-transform duration-300 group-hover:scale-125">
-                  <Heart className="h-8 w-8 text-primary" />
+                  <Users className="h-8 w-8 text-secondary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Our Commitment</h3>
-                <p className="text-sm text-gray-600">Loving our nation and giving our all</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Next Generation</h3>
+                <p className="text-sm text-gray-600">Empowered to stand tall, dream boldly, and lead with compassion.</p>
               </div>
             </div>
 
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
-                Madagascar, a breathtaking jewel of the Indian Ocean, is blessed with immeasurable natural 
-                resources, but burdened by persistent poverty. Environmental degradation, climate change 
-                vulnerabilities, poor infrastructure and governance issues have long strangled its development, 
-                hindering our island's fight for the future where its people flourish alongside its beauty.
+               Madagascar, a jewel of the Indian Ocean, holds immense beauty and potential. Though burdened by poverty and broken systems, hope remains. We believe true restoration begins with faith — as hearts are turned to God, lives are rebuilt, and futures renewed.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Nevertheless, decades of struggle haven't dimmed the potential for progress. Hope remains, 
-                and change is on the horizon. In RnR, we believe that Madagascar's brighter future lies in 
-                supporting the next generation. With a vibrant youth demographic exceeding half the population, 
-                Madagascar more than just literally sits on a goldmine. Nurturing this resource carefully can 
-                unlock phenomenal growth and we are here to be actors and witnesses of this change.
+                We envision communities built on dignity, opportunity, compassion and care, where the next generation can dream freely and live purposefully. Together, we work to transform cycles of poverty into stories of hope and renewal. At RnR, we give our all to see  Madagascar restored — its people thriving, its beauty preserved.
               </p>
               
               <p className="text-lg leading-relaxed font-semibold text-primary">
-                We love our nation and desire to give our all to make it thrive.
+                At RnR, we give our all to see  Madagascar restored — its people thriving, its beauty preserved.
+
               </p>
             </div>
           </motion.div>

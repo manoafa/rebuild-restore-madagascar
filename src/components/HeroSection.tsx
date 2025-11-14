@@ -41,12 +41,15 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-gray-200 leading-relaxed"
-            >
-              Join us in building hope and restoring communities across Madagascar. 
-              Together, we can create sustainable change through education, healthcare, 
-              and community development.
-            </motion.p>
+              className="text-xl text-gray-200 leading-relaxed" >
+              A community-driven education initiative committed to ending poverty in 
+              Madagascar by empowering the next generation.
+             </p>
+            <p className="text-xl text-gray-200 leading-relaxed">
+             Join us in bringing hope and restoring lives through compassion, faith, 
+             and education. Together, we can build the foundation for lasting change — 
+             one child, one family, one community at a time.
+             </p>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -98,7 +101,7 @@ const HeroSection = () => {
           >
             <div className="relative">
               <img
-                src="/heroscared.avif"
+                src="/intro.mp4"
                 alt="Community in Madagascar"
                 className="rounded-2xl shadow-2xl"
               />
@@ -110,7 +113,7 @@ const HeroSection = () => {
               </div>
               <div className="absolute -top-6 -right-6 bg-secondary text-white p-6 rounded-xl shadow-lg">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">150+</div>
+                  <div className="text-3xl font-bold">200+</div>
                   <div className="text-sm">Children helped</div>
                 </div>
               </div>

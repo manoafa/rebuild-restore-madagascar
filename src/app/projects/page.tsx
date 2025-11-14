@@ -13,46 +13,89 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Weekend Food Sharing',
-      description: 'Providing free, nutritious meals to students after classes every Saturday to promote community care and reduce food insecurity.',
-      image: '/heroscared.avif',
-      status: 'Ongoing',
-      category: 'Social',
-      location: 'Antananarivo',
-      volunteers: 12,
-      progress: 75,
-      startDate: '2022-09-03',
-      endDate: ''
+      title: 'Children and Youth Center',
+      description: 'Construction of a 3-story multi-purpose center for education, arts, and community development.',
+      image: '/Center.jpg',
+      category: 'Infrastructure',
+      status: 'Urgent - Ongoing',
+      objective: 'Provide a permanent safe space for learning, creativity, and youth empowerment.',
+      situation: 'Many of our activities currently take place in temporary, overcrowded spaces. To give children a true place to grow, we are building a permanent center with classrooms, workshops, a library, dormitory, cafeteria, and play areas on a 200 m² plot.',
+       initial goal: '$35,000 (first phase)',
+        total budget: '$87,000',
+        progress: 'Design complete; land secured; fundraising in progress; well digging started.'
+      startDate: ' October 2025',
+      endDate:  'February 2026'
     },
     {
       id: 2,
-      title: 'Education Center Construction',
-      description: 'Building modern educational facilities to provide quality education for children in underserved communities.',
-      image: '/heroscared.avif',
-      status: 'Ongoing',
-      category: 'Infrastructure',
-      location: 'Antananarivo',
-      volunteers: 5,
-      progress: 15,
-      startDate: '2025-03-01',
-      endDate: ''
+      title: 'English Language Class',
+      description: 'Weekly English classes designed to help children and youth build language skills for future education and career opportunities.',
+      image: '/English.jpg',
+      category: 'Education & Capacity Building',
+      objective: 'Equip participants with basic to intermediate English communication skills, giving them greater access to higher education, global information, and employment opportunities.',
+      situation: ' In rural communities, students rarely have the chance to learn English effectively due to a lack of teachers and materials. Our volunteer-led classes use songs, games, and conversation practice to make learning fun and meaningful.',
+      schedule: 'Offered weekly',
+      startDate: 'June 2022'
     },
     {
       id: 3,
-      title: 'Sharing School Supplies',
-      description: 'Collecting and distributing essential school materials to underprivileged students to support their education and learning success.',
-      image: '/heroscared.avif',
-      status: 'Completed',
-      category: 'Education',
-      location: 'Antananarivo',
-      volunteers: 10,
-      progress: 100,
-      startDate: '2025-08-01',
-      endDate: '2025-09-01'
-    }
-  ]
+      title: 'Character and Life Education',
+      description: 'A weekly “life class” that teaches kindness, respect, discipline, and good manners to help children and youth grow into responsible, compassionate citizens and christians.',
+      image: '/Life.jpg',
+      category: 'Education & Capacity Building',
+      objective: 'Develop moral character, social responsibility, and emotional intelligence in young people.',
+      situation: 'Many children lack structured guidance in personal and social values. Through storytelling, role-play, and community examples, we help them learn respect, teamwork, honesty, and empathy in a practical and engaging way.',
+      schedule: 'Offered weekly',
+      startDate: 'June 2022',
+    },  
+{
+      id: 4,
+      title: 'Free Meal Sharing',
+      description: 'Once a week, the center shares a nutritious meal with children and youth to promote community, health, and care.',
+      image: '/Food.jpg',
+       category: 'Community Support',
+      objective: 'Support children’s nutrition, create a sense of belonging and prevent skipping school due to hunger.',
+      situation: 'Many children come to school hungry, which affects concentration, growth, and motivation. With help from local rice donations and volunteers, we offer a weekly meal that nourishes both body and spirit.',
+      schedule: 'Offered weekly',
+      startDate: 'June 2022',
+    },  
+{
+      id: 5,
+      title: 'Parent Workshop',
+      description: 'Monthly workshops to guide parents in supporting their children’s education and well-being, including marriage, family, and financial training.',
+      image: '/Parents.jpg',
+      category: 'Community Support',
+      objective: 'Develop moral character, social responsibility, and emotional intelligence in young people.',
+      situation: ' Many parents never had the chance to receive proper guidance on parenting or communication. Our workshops, led by local family educators, provide practical tools and encouragement to help families grow together in understanding and faith.',
+      schedule: 'Offered monthly',
+      startDate: ' March 2024',
+      endDate: ''
+    },  
+{
+      id: 6,
+      title: 'Nanofinancing Project',
+      description: 'A community-based microfunding initiative where members pool small contributions together. The combined amount, supplemented by the organization, is then distributed to members in rotation as seed money to start or strengthen their personal or small business projects.',
+      image: '/Farming.jpg',
+       category: 'Livelihood Development',
+      objective: 'Promote financial inclusion and entrepreneurship among community members by providing access to small-scale funding and encouraging collective responsibility.',
+      situation: 'Many children lack structured guidance in personal and social values. Through storytelling, role-play, and community examples, we help them learn respect, teamwork, honesty, and empathy in a practical and engaging way.',
+      schedule: 'Offered weekly',
+      startDate: 'September 2025',
+    },  
+{
+      id: 7,
+      title: 'School Supplies Donation',
+      description: 'Collection and distribution of school supplies for the most disadvantaged children in our community.',
+      image: '/Supplies.jpg',
+       category: 'Education & Capacity Building',
+      objective: 'Ensure every child has access to basic learning materials.',
+      situation: 'For many children, the lack of notebooks, pencils, or uniforms is enough to keep them out of school. We partner with donors and schools to collect and distribute essential supplies each year.',
+      schedule: 'Annually',
+      startDate: 'September 2024',
+    },
+]
 
-  const categories = ['all', 'Infrastructure', 'Education', 'Healthcare', 'Agriculture', 'Social', 'Emergency']
+  const categories = ['all', 'Infrastructure', 'Education & Capacity Building', 'Community Support', 'Livelihood Development']
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
@@ -74,7 +117,7 @@ const Projects = () => {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover the impactful projects we're working on across Madagascar. 
-              From infrastructure development to education and healthcare, each project 
+              From infrastructure development to education and family care, each project 
               is designed to create lasting positive change.
             </p>
           </motion.div>

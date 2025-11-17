@@ -29,8 +29,8 @@ const AboutHero = () => {
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Madagascar is home to over 32 million people, with nearly 60% under the age of 25. Yet, 67% of children face multidimensional poverty — lacking access to education, healthcare, and basic needs. While 76% enroll in primary school, only 27% continue to secondary education, leaving 1.7 million children out of school. Without intervention, this generation risks being trapped in a cycle of poverty and lost potential.
-            </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+            </p><br />
+            <p className="text-lg text-gray-700 leading-relaxed">
               We believe investing in education and holistic care is not just a response to need — it’s an act of hope and faith in what Madagascar can become. From one small village, we are growing our programs to reach more families, build stronger communities, and ultimately help transform an entire nation, one restored life at a time.
             </p>
 

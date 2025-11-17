@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Users, Heart, Target, Award } from 'lucide-react'
+import { Users, Heart, Target, Award, UtensilsCrossed } from 'lucide-react'
 
 const StatsSection = () => {
   const ref = useRef(null)
@@ -23,7 +23,7 @@ const StatsSection = () => {
     //   description: 'Reducing barriers to education for the most vulnerable'
     // },
     {
-      icon: Meal,
+      icon: UtensilsCrossed,
       number: '7000+',
       label: 'Meals Shared',
       description: 'Free lunch provided'

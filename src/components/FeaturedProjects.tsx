@@ -15,7 +15,7 @@ const FeaturedProjects = () => {
       id: 1,
       title: 'Children and Youth Center ',
       description: 'Construction of a 3-story multi-purpose center for education, arts, and community development.',
-      image: '/heroscared.avif',
+      image: '/Center.jpg',
        Category: 'Infrastrcuture',
        Objective: 'Provide a permanent safe space for learning, creativity, and youth empowerment.',
       Status: 'Urgent-Ongoing',
@@ -25,7 +25,7 @@ const FeaturedProjects = () => {
       id: 2,
       title: 'Free Meal Sharing ',
       description: 'Once a week, we share a nutritious meal with children and youth to promote community, health, and care.',
-      image: '/heroscared.avif',
+      image: '/Food.jpg',
        Category: 'Social',
        Objective: 'Support children’s nutrition and create a sense of belonging.',
       Status: 'Ongoing',
@@ -34,7 +34,7 @@ const FeaturedProjects = () => {
       id: 3,
       title: 'Parent Workshop',
       description: 'Strengthen family involvement in children’s education and promote positive parenting.',
-      image: '/heroscared.avif',
+      image: '/Parents.jpg',
        Category: 'Infrastrcuture',
        Objective: 'Provide a permanent safe space for learning, creativity, and youth empowerment.',
       Status: 'Ongoing',
@@ -76,13 +76,13 @@ const FeaturedProjects = () => {
                 />
                 <div className="absolute top-4 right-4">
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                    project.status === 'Completed' 
+                    project.Status === 'Completed' 
                       ? 'bg-green-100 text-green-800' 
-                      : project.status === 'Ongoing'
+                      : project.Status === 'Ongoing'
                       ? 'bg-blue-100 text-blue-800'
                       : 'bg-yellow-100 text-yellow-800'
                   }`}>
-                    {project.status}
+                    {project.Status}
                   </span>
                 </div>
               </div>
@@ -94,34 +94,8 @@ const FeaturedProjects = () => {
                 <p className="text-gray-600 mb-4 text-justify">
                   {project.description}
                 </p>
-                
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center text-sm text-gray-600">
-                    <MapPin className="h-4 w-4 mr-2 text-primary" />
-                    {project.location}
-                  </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Users className="h-4 w-4 mr-2 text-primary" />
-                    {project.volunteers} volunteers
-                  </div>
-                </div>
-
-                {/* Progress Bar */}
-                <div className="mb-4">
-                  <div className="flex justify-between text-sm text-gray-600 mb-1">
-                    <span>Progress</span>
-                    <span>{project.progress}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div 
-                      className="bg-primary h-2 rounded-full transition-all duration-300"
-                      style={{ width: `${project.progress}%` }}
-                    ></div>
-                  </div>
-                </div>
 
                 <Link
-                  // href={`/projects/${project.id}`}
                   href="/projects"
                   className="inline-flex items-center text-primary hover:text-blue-700 font-medium transition-colors"
                 >

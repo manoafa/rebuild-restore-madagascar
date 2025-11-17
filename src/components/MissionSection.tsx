@@ -33,9 +33,9 @@ const MissionSection = () => {
       bgColor: 'bg-primary/10',
       iconColor: 'text-primary',
       description: 'Life brings challenges, but with encouragement and guidance, every young person can grow stronger. We help children and youth develop character, perseverance, and a positive mindset. Through mentorship and supportive relationships, they learn to face difficulties with courage and build a future filled with hope and opportunity.'
-    }
- {
-      icon: Jesus fish,
+    },
+    {
+      icon: Shield,
       title: 'Cultivate Faith',
       color: 'primary',
       bgColor: 'bg-primary/10',
@@ -61,7 +61,7 @@ const MissionSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {missions.map((mission, index) => (
             <motion.div
               key={mission.title}
@@ -99,7 +99,8 @@ const MissionSection = () => {
                Then your light will break forth like the dawn, and your healing will quickly appear!
             </h3>
             <p className="text-lg opacity-90 max-w-3xl mx-auto">
-              Is not this the kind of fasting I have chosen: to loose the chains of injustice and untie the cords of the yoke, to set the oppressed free and break every yoke? Is it not to share your food with the hungry and to provide the poor wanderer with shelter— when you see the naked, to clothe them, and not to turn away from your own flesh and blood? (Isa 58)
+              <i>"Is not this the kind of fasting I have chosen: to loose the chains of injustice and untie the cords of the yoke, to set the oppressed free and break every yoke? Is it not to share your food with the hungry and to provide the poor wanderer with shelter— when you see the naked, to clothe them, and not to turn away from your own flesh and blood?"</i>
+                <br /><center><span className="underline decoration-wavy text-tiny"><i>Isaiah 58 : 7 - 8</i></span></center>
             </p>
           </div>
         </motion.div>

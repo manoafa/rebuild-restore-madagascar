@@ -20,9 +20,9 @@ const Projects = () => {
       status: 'Urgent - Ongoing',
       objective: 'Provide a permanent safe space for learning, creativity, and youth empowerment.',
       situation: 'Many of our activities currently take place in temporary, overcrowded spaces. To give children a true place to grow, we are building a permanent center with classrooms, workshops, a library, dormitory, cafeteria, and play areas on a 200 m² plot.',
-      initial goal: '$35,000 (first phase)',
-      total budget: '$87,000',
-      progress: 'Design complete; land secured; fundraising in progress; well digging started.'
+      initialGoal: '$35,000 (first phase)',
+      totalBudget: '$87,000',
+      progress: 'Design complete; land secured; fundraising in progress; well digging started.',
       startDate: ' October 2025',
       endDate:  'February 2026'
     },
@@ -189,34 +189,29 @@ const Projects = () => {
                     {project.description}
                   </p>
                   
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <MapPin className="h-4 w-4 mr-2 text-primary" />
-                      {project.location}
+                  {(project.startDate || ('schedule' in project && project.schedule)) && (
+                    <div className="space-y-3 mb-6">
+                      {project.startDate && (
+                        <div className="flex items-center text-sm text-gray-600">
+                          <Calendar className="h-4 w-4 mr-2 text-primary" />
+                          {project.startDate}{'endDate' in project && project.endDate ? ` - ${project.endDate}` : ''}
+                        </div>
+                      )}
+                      {'schedule' in project && project.schedule && (
+                        <div className="flex items-center text-sm text-gray-600">
+                          <Calendar className="h-4 w-4 mr-2 text-primary" />
+                          {project.schedule}
+                        </div>
+                      )}
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Users className="h-4 w-4 mr-2 text-primary" />
-                      {project.volunteers} volunteers
-                    </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <Calendar className="h-4 w-4 mr-2 text-primary" />
-                      {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
-                    </div>
-                  </div>
+                  )}
 
-                  {/* Progress Bar */}
-                  <div className="mb-4">
-                    <div className="flex justify-between text-sm text-gray-600 mb-1">
-                      <span>Progress</span>
-                      <span>{project.progress}%</span>
+                  {/* Progress Info */}
+                  {project.progress && (
+                    <div className="mb-4">
+                      <p className="text-sm text-gray-600">{project.progress}</p>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div 
-                        className="bg-primary h-2 rounded-full transition-all duration-300"
-                        style={{ width: `${project.progress}%` }}
-                      ></div>
-                    </div>
-                  </div>
+                  )}
 
                   <button className="w-full btn-outline flex items-center justify-center group">
                     Learn More

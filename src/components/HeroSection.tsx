@@ -44,7 +44,7 @@ const HeroSection = () => {
               className="text-xl text-gray-200 leading-relaxed" >
               A community-driven education initiative committed to ending poverty in 
               Madagascar by empowering the next generation.
-             </p>
+             </motion.p>
             <p className="text-xl text-gray-200 leading-relaxed">
              Join us in bringing hope and restoring lives through compassion, faith, 
              and education. Together, we can build the foundation for lasting change — 
@@ -100,11 +100,16 @@ const HeroSection = () => {
             className="relative"
           >
             <div className="relative">
-              <img
+              <video
                 src="/intro.mp4"
-                alt="Community in Madagascar"
-                className="rounded-2xl shadow-2xl"
-              />
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              >
+                Your browser does not support the video tag.
+              </video>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">3+</div>
@@ -126,4 +131,3 @@ const HeroSection = () => {
 }
 
 export default HeroSection
-

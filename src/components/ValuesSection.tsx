@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Heart, Users, Shield, Globe, Lightbulb } from 'lucide-react'
+import { Heart, Users, Shield, Globe, Lightbulb, Cross } from 'lucide-react'
 
 const ValuesSection = () => {
   const ref = useRef(null)
@@ -32,7 +32,7 @@ const ValuesSection = () => {
     },
     {
       icon: Cross,
-      title: 'Faith'
+      title: 'Faith',
       description: 'Our faith in Christ is the foundation of all we do — guiding our love, integrity, and hope for restoration .'
     },
     {

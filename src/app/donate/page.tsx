@@ -2,18 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
-import { Heart, Shield, CreditCard, Smartphone, CheckCircle } from 'lucide-react'
-import DonationForm from '@/components/DonationForm'
-import PaymentMethods from '@/components/PaymentMethods'
+import { useRef } from 'react'
+import { Heart, Shield, CreditCard, CheckCircle, ArrowRight } from 'lucide-react'
 
 const Donate = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
-  const donationAmounts = [25, 50, 100, 250, 500, 1000]
-  const [selectedAmount, setSelectedAmount] = useState(0)
-  const [customAmount, setCustomAmount] = useState('')
 
   return (
     <div className="min-h-screen">
@@ -52,17 +47,36 @@ const Donate = () => {
       <section ref={ref} className="py-20 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Donation Form */}
+            {/* Donation CTA */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 0.8 }}
+              className="flex flex-col items-center justify-center"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                Choose Your Donation Amount
-              </h2>
-              
-              <DonationForm />
+              <div className="w-full max-w-md text-center space-y-6">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Make Your Donation
+                </h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  Support our mission to rebuild and restore communities in Madagascar. 
+                  Your donation helps us provide education, meals, and essential support to children and families in need.
+                </p>
+                
+                <a
+                  href="https://givebutter.com/rnrmadagascar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-full py-4 px-8 bg-primary text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                >
+                  <Heart className="h-6 w-6 mr-2" />
+                  Donate Now via Givebutter
+                </a>
+                
+                <p className="text-sm text-gray-500 mt-4">
+                  Secure donations processed through Givebutter
+                </p>
+              </div>
             </motion.div>
 
             {/* Impact Information */}
@@ -141,7 +155,7 @@ const Donate = () => {
         </div>
       </section>
 
-      {/* Payment Methods */}
+      {/* Givebutter Info */}
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <motion.div
@@ -151,14 +165,54 @@ const Donate = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Secure Payment Methods
+              Secure & Easy Donations
             </h2>
-            <p className="text-xl text-gray-600">
-              We accept all major credit cards and PayPal for your convenience
+            <p className="text-xl text-gray-600 mb-8">
+              All donations are processed securely through Givebutter
             </p>
+            
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="space-y-4 text-left">
+                  <div className="flex items-start space-x-4">
+                    <Shield className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Secure Processing</h3>
+                      <p className="text-gray-600">All transactions are encrypted and secure. We use Givebutter, a trusted platform for nonprofit donations.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <CreditCard className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Multiple Payment Options</h3>
+                      <p className="text-gray-600">Accept credit cards, debit cards, PayPal, and other payment methods through Givebutter.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Instant Receipt</h3>
+                      <p className="text-gray-600">You'll receive an immediate email confirmation for your donation and tax receipt.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8 pt-8 border-t">
+                  <a
+                    href="https://givebutter.com/rnrmadagascar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full py-3 px-6 bg-primary text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Visit Our Givebutter Campaign
+                    <ArrowRight className="h-5 w-5 ml-2" />
+                  </a>
+                </div>
+              </div>
+            </div>
           </motion.div>
-
-          <PaymentMethods />
         </div>
       </section>
 
